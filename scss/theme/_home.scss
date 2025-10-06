@@ -1,0 +1,569 @@
+body {
+	background: #4b379a;
+}
+.main-wrapper-first {
+	width: 68.75%;
+	margin: 0 auto;
+	margin-top: 6rem;
+	@include media-breakpoint-up(xl) {
+		width: 80%;
+	}
+	@include media-breakpoint-down(lg) {
+		width: 90%;
+	}
+	@include media-breakpoint-down(sm) {
+		margin-top: 3rem;
+		width: 97%;
+	}
+}
+.main-wrapper {
+	width: 68.75%;
+	margin: 0 auto;
+	@include media-breakpoint-up(xl) {
+		width: 80%;
+	}
+	@include media-breakpoint-down(lg) {
+		width: 90%;
+	}
+	@include media-breakpoint-down(sm) {
+		width: 97%;
+	}
+}
+
+.p1-gradient-bg {
+	background-image: -moz-linear-gradient( 0deg,#3224b0 0%,#be5ede 100%);
+	background-image: -webkit-linear-gradient( 0deg,#3224b0 0%,#be5ede 100%);
+	background-image: -ms-linear-gradient( 0deg,#3224b0 0%,#be5ede 100%);
+}
+
+.p2-gradient-bg {
+	background-image: -moz-linear-gradient( 90deg,#3224b0 0%,#be5ede 50%);
+	background-image: -webkit-linear-gradient( 90deg,#3224b0 0%,#be5ede 50%);
+	background-image: -ms-linear-gradient( 90deg,#3224b0 0%,#be5ede 50%);
+}
+
+.p1-gradient-color {
+	background: -moz-linear-gradient(0deg, #3224b0, #be5ede);
+	background: -webkit-linear-gradient(0deg, #3224b0, #be5ede);
+	background: -ms-linear-gradient(0deg, #3224b0, #be5ede);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section-gap {
+	padding: 120px 0;
+}
+.section-title {
+	padding-bottom: 30px;
+	h2 {
+		margin-bottom: 5px;
+	}
+}
+.mt-sm-30 {
+	@include media-breakpoint-down (sm) {
+		margin-top: 30px;
+	}
+}
+.mt-sm-20 {
+	@include media-breakpoint-down (sm) {
+		margin-top: 20px;
+	}
+}
+
+.primary-btn {
+	line-height: 40px;
+	padding: 0 30px;
+	border-radius: 20px;
+	background: transparent;
+	border: 1px solid $white;
+	color: $title-color;
+	display: inline-block;
+	font-weight: 500;
+	position: relative;
+	@include transition();
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+	span {
+		color: $white;
+		position: relative;
+		z-index: 2;
+	}
+	&:after {
+		position: absolute;
+		content: "";
+		@extend .p1-gradient-bg;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 20px;
+		opacity: 0;
+		@include transition();
+		z-index: 1;
+	}
+	&:hover {
+		color: $white;
+		border: 1px solid transparent;
+		&:after {
+			opacity: 1;
+		}
+	}
+	&.hover {
+		color: $white;
+		border: 1px solid transparent;
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+    
+//--------- Start Banner Area -----------//
+.banner-area {
+	.height {
+		height: 540px;
+	}
+	.generic-height {
+		height: 400px;
+	}
+}
+
+.banner-content {
+	margin-top: 50px;
+	h1 {
+		font-size: 120px;
+		font-weight:100;
+		line-height: 1.25em;
+		color:$white;
+	}
+	h4 {
+		color:$white;
+		font-size:18px;
+		font-weight: 300;
+		letter-spacing:3px;		
+	}
+
+	@media ( max-width:768px){
+		h1{
+			font-size:60px;
+		}
+	}
+	
+}
+
+.hero-area {	
+		background: url(../img/i2.png) no-repeat center/contain;
+		background-size: cover;
+}
+
+.overlay-bg {
+	@extend .p1-gradient-bg;
+	opacity:.9;
+}
+
+
+
+.genric-banner{
+	background:transparent;
+	h1{
+		margin-bottom:10px;
+	}
+}
+
+
+//--------- End Banner Area -----------//
+//----------- Start Feature Area ------------//
+
+
+.featured-area{
+	background-color:$white;
+	h2{
+		font-size:36px;
+		font-weight:100;
+		span{
+			font-weight:600;
+		}
+	}
+	p{
+		margin-top:25px;
+		margin-bottom:25px;
+	}
+}
+
+	@media ( max-width:768px){
+		.feature-right{
+			margin-top:50px;
+		}
+	}
+
+.owl-dots {
+    text-align: center;
+    bottom: 5px;
+    margin-top:20px;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.owl-dot {
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    background: rgba(127,127,127, 0.5);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.owl-dot.active {
+	@include transition;
+    padding: 0px 25px 0px 0px;
+    @extend .p1-gradient-bg;
+}
+
+//----------- End Feature Area ------------//
+//---------- Start parallux Area ----------//
+
+
+.parallux-area{
+	// background:url(../img/parallux-bg.jpg) no-repeat left/contain;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position:left;
+	.overlay-bg{
+		background:#222;
+		opacity:.3;
+	}
+	h2{
+		color:$white;
+		font-size:36px;
+		font-weight: 100;
+		span{
+			font-weight:600;
+		}
+	}
+	p{
+		color:$white;
+		margin-top:20px;
+		margin-bottom:25px;
+	}
+}
+
+
+//---------- End parallux Area ----------//
+//--------- Start Service Area -----------//
+.service-area {
+	padding: 90px 0 120px 0;
+	background: $white;
+	.single-service {
+		height: 400px;
+		color:$white;
+		position: relative;
+		border-radius: 3px;
+		overflow: hidden;
+		margin-top: 30px;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: center center !important;
+		.overlay-content {
+			@extend .p1-gradient-bg;
+			opacity:.8;
+			padding: 30px;
+			@include flexbox();
+			@include flex-direction(column);
+			@include justify-content(end);
+			@include transition();
+			transition-timing-function: cubic-bezier(.39,.92,.69,.65);
+			transform: scaleY(0);
+			transform-origin: top;
+			h4 {
+				color:$white;
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 15px;
+			}
+		}
+		&:hover {
+			.overlay-content {
+				transform: scaleY(1);
+			}
+		}
+	}
+}
+//--------- End service Area -----------//
+
+//--------- Start Contact Area -----------//
+
+	.contact-area{
+		background: url(../img/contact-bg.jpg) no-repeat center center/cover;
+		color:$white;
+		h2{
+			font-size:36px;
+			font-weight:100;
+			span{
+				font-weight:600;
+			}
+		}
+		p{
+			font-size:14px;
+			font-weight:300;
+		}
+	}
+	.contact-form {
+		::-webkit-input-placeholder {
+			color:    $white;
+			font-weight: 300;
+		}
+		:-moz-placeholder {
+			color:    $white;
+			opacity:  1;
+			font-weight: 300;
+		}
+		::-moz-placeholder {
+			color:    $white;
+			opacity:  1;
+			font-weight: 300;
+		}
+		:-ms-input-placeholder { 
+			color:    $white;
+			font-weight: 300;
+		}
+		::-ms-input-placeholder { 
+			color:    $white;
+			font-weight: 300;
+		}	
+		.alert-msg {
+			color: $white!important;
+			margin-top: 50px;
+			z-index:1;
+		}
+
+
+		.primary-btn{
+			&:hover{
+				background:transparent;
+				span{
+					color:$white !important;
+				}
+			}
+		}
+
+	}
+	.common-input {
+		border: 1px solid #8373ca;
+		line-height: 48px;
+		width: 100%;
+		display: block;
+		background: transparent;
+		padding: 0 25px;
+		color: $white;
+	}
+	.common-textarea {
+		border: 1px solid #8373ca;
+		width: 100%;
+		display: block;
+		background: transparent;
+		padding: 15px 25px;
+		color: $white;
+		height: 150px;
+		resize: none;
+	}
+
+//-------- End Contact Area ----------//
+
+
+//-------- Start Newsletter Area ----------//
+
+.newsletter-area{
+	background-color:#f9f9ff;
+	.primary-btn{
+  		border:transparent;
+  	}
+	h3 {
+		font-size:36px;
+  		font-weight: 100;
+  		color:#222222;
+  		span{
+  			font-weight:600;
+  		}
+  	}
+  	p{
+  		margin-top:3rem;
+  		font-weight:300;
+  	}
+
+  	.subcribe-form{
+		margin-top:30px;
+  	}
+
+  	@media(min-width:991px){
+		.subcribe-form{
+			width:600px;
+		}
+  	}
+
+  	@media ( max-width:768px ){
+	p{
+		margin-top: 120px;
+	}	
+}
+
+}
+
+
+
+@media (max-width: 991px) {
+  .subscription {
+    margin-top: 20px;
+  }
+}
+
+.subscription input {
+  width: 100%;
+  line-height: 50px;
+  padding: 0 180px 0 25px;
+  border: none;
+  background:$white;
+  font-weight: 300;
+  border-radius: 25px;
+  color: $black;
+}
+
+@media (max-width: 376px) {
+	.subscription input {
+		width:80%;
+	}
+}
+
+.subscription .primary-btn {
+  background:$primary-color;
+  text-transform:uppercase;
+  color:$white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+
+.subscription .info {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  width:100%;
+  font-size: 12px;
+}
+
+.subscription .info.valid {
+  color: green;
+}
+
+.subscription .info.error {
+  color: red;
+}
+
+@media (max-width: 767px) {
+  .subscription input {
+    padding: 0 25px;
+  }
+  .subscription .primary-btn {
+    top: 120%;
+    transform: translate(50%, 0);
+    right: 50%;
+    width: 177px;
+  }
+  .subscription .info {
+    top: 110px;
+  }
+
+  .newsletter-area{
+  	padding-bottom:120px;
+  }
+}
+
+//----------- End Newsletter Area --------------//
+
+
+//----------- Start Footer Area --------------//
+.footer-area {
+	background: #222222;
+	padding: 100px 0;
+	margin-bottom: 6rem;
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 3rem;
+	}
+	.footer-content {
+		position: relative;
+		z-index: 2;
+	}
+	.footer-menu {
+		a {
+			display: inline-block;
+			margin: 0 20px;
+			color: $white;
+			&:hover {
+				color: $primary-color;
+			}
+
+			@media( max-width:768px){
+				margin: 0 15px;
+			}
+		}
+	}
+
+	.footer-social {
+		margin: 30px 0;
+		a {
+			display: inline-block;
+			margin: 0 5px;
+			padding: 2px;
+			i {
+				color: $white;
+				@include transition();
+			}
+			&:hover {
+				i {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	.copy-right-text {
+		text-align: center;
+		color: $white;
+		a,i{
+			color:$primary-color;
+		}
+	}
+}
+//----------- End Footer Area --------------//
+
+
+//----------- Start Generic Page -------------//
+
+.about-generic-area {
+	background: $white;
+	.border-top-generic {
+		padding: 120px 15px;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+}
+.white-bg {
+	background: $white;
+}
+.section-top-border {
+	padding: 70px 0;
+}
+.switch-wrap {
+	margin-bottom: 10px;
+	p {
+		margin: 0;
+	}
+}
+//----------- End Generic Page -------------//
